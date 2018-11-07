@@ -1,97 +1,56 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# React for Designers
+![](https://cl.ly/0Q093L3s2Q27/download/react-promo.jpg)
+React is the most popular javascript framework. It’s component-based, similar to how you use Components in [Figma](https://www.figma.com/?ref=designcode) in order to reuse the elements in powerful ways. This in turn allows for better collaboration between teammates. With this course, you'll learn how to build and animate your site from scratch. Create highly customizable components for your design system. Full video tutorials:
+https://designcode.io/react
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
+## Course Downloads
+- [Intro to React](https://github.com/MengTo/my-react-app/tree/f095062888caa9f09a454507ee4b51e0760cf024)
+- [Basic Styling in CSS](https://github.com/MengTo/my-react-app/tree/25acf94655e10cf6a7b2b503df49d291dcef5cc3)
+- [Adaptive Layouts with CSS Grid](https://github.com/MengTo/my-react-app/tree/ad4d5eec229d7a72ad53d3f0b8f5a3e52b3a86bc)
+- [Interactions and Animations](https://github.com/MengTo/my-react-app/tree/7c6f0948754fe8e876212b6c84474ed4a69da207)
+- [SVG Animation](https://github.com/MengTo/my-react-app/tree/adaba5ab5339dcf97a5aead4a5dea173a7b629fd)
+- [Components and Props](https://github.com/MengTo/my-react-app/tree/f8cecaf15638e633cfc70248a6590206bae08ac0)
+- [States and Events](https://github.com/MengTo/my-react-app/tree/6795aeb92155de1046e44255fdc988663ff18b14)
+- [Styled Components](https://github.com/MengTo/my-react-app/tree/555833defc42f63db1e64c7893cdf0923be88943)
+- [Static Data with JSON](https://github.com/MengTo/my-react-app/tree/6777553e4293a34072d40a2c8913357c982cffb0)
+- [GraphQL with Contentful](https://github.com/MengTo/my-react-app/tree/e9e674ba40f91faf929d219f5c680114e9e0881e)
+- [Publish to Netlify](https://github.com/MengTo/my-react-app/tree/e9e674ba40f91faf929d219f5c680114e9e0881e)
+- [Payments with Stripe](https://github.com/MengTo/my-react-app/tree/87ccfa1431301313511e29875f5c8a2221caed36)
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## Install Gatsby and Node
 
-## 🚀 Quick start
+Make sure that you have the Gatsby installed and [Node](https://nodejs.org/en/download/)</a>:
+```sh
+npm install --global gatsby-cli
+```
 
-1.  **Create a Gatsby site.**
+## Install Libraries
+```sh
+npm install
+```
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## Known Issues
+### Permission Issue Installing Gatsby
+If you have issues installing Gatsby, please use sudo in front.
+```sh
+sudo npm install --global gatsby-cli
+```
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
-    ```
+### Image issue in In Basic Styling in CSS
+You may get an error when you call the local image. The easiest solution is to put the image online using [CloudApp](http://getcloudapp.com).
+```css
+background: url('https://cl.ly/3k1F152x261C/download/wallpaper3.jpg');
+```
 
-1.  **Start developing.**
+Or, you can try installing this library.
+```sh
+npm install --save url-loader
+```
 
-    Navigate into your new site’s directory and start it up.
+Or, you can also put the images inside `/static/images` or `/public/images` instead of `/src/images`. Link the images like this:
+```css
+background: url('../../static/images/wallpaper3.jpg');
+```
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
-
-  1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
--   **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+### GraphQL giving an error
+Make sure to restart your local environment by doing **Control + C** in the Terminal, and then `gatsby develop`.
